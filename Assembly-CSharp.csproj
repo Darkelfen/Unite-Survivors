@@ -51,14 +51,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
      <Compile Include="Assets\Scripts\Movement.cs" />
      <Compile Include="Assets\Scripts\sprite.cs" />
-=======
-     <Compile Include="Assets\Movement.cs" />
-     <Compile Include="Assets\Scripts\AnimalMovement.cs" />
-     <Compile Include="Assets\sprite.cs" />
->>>>>>> 403d0728a1d96346e957adf44b785c2a776c2294
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>C:/Users/usuario/Desktop/U/Otros/Unity Game Unite Survivors/Unite-Survivors/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
