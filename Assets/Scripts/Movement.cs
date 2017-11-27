@@ -5,6 +5,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour {
 
 	// Use this for initialization
+<<<<<<< HEAD
 	public float speed = 4f;
 
 	Vector3 movement;
