@@ -5,11 +5,8 @@ using UnityEngine;
 public class Movement : MonoBehaviour {
 
 	// Use this for initialization
-<<<<<<< HEAD
-	public float speed = 4f;
-=======
+
 	public float speed = 2f;
->>>>>>> bf063cbc256a9990634285d42c8d244cbdc7ae38
 
 	Vector3 movement;
 	Animator anim;
@@ -35,12 +32,8 @@ public class Movement : MonoBehaviour {
 	void Move( float h, float v)
 	{
 		movement.Set (h, 0f, v);
-<<<<<<< HEAD
-		movement = movement.normalized * speed * Time.deltaTime;
-=======
 
-		movement = movement.normalized * Time.deltaTime;
->>>>>>> bf063cbc256a9990634285d42c8d244cbdc7ae38
+		movement = movement.normalized * speed * Time.deltaTime;
 
 		playerRigidBody.MovePosition (transform.position + movement);
 
