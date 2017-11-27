@@ -5,7 +5,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour {
 
 	// Use this for initialization
-	public float speed = 6f;
+	public float speed = 2f;
 
 	Vector3 movement;
 	Animator anim;
@@ -32,7 +32,7 @@ public class Movement : MonoBehaviour {
 	{
 		movement.Set (h, 0f, v);
 
-		movement = movement.normalized * speed * Time.deltaTime;
+		movement = movement.normalized * Time.deltaTime * speed;
 
 		playerRigidBody.MovePosition (transform.position + movement);
 	}
@@ -41,5 +41,9 @@ public class Movement : MonoBehaviour {
 	{
 		bool walking = h != 0f || v != 0f;
 		anim.SetBool ("IsWalking", walking);
+	}
+	void Rotate(float h)
+	{
+		
 	}
 }
