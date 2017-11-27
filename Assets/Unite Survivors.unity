@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -268,8 +268,8 @@ GameObject:
   - component: {fileID: 1625350119}
   - component: {fileID: 1625350118}
   - component: {fileID: 1625350117}
-  - component: {fileID: 1625350116}
   - component: {fileID: 1625350121}
+  - component: {fileID: 1625350116}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -286,7 +286,7 @@ Animator:
   m_GameObject: {fileID: 1625350115}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 72e27b584a83ab246a4bda18383e4257, type: 2}
+  m_Controller: {fileID: 9100000, guid: dd431f399319d07458799bf5a524a65d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
