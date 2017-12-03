@@ -32,8 +32,6 @@ public class Movement : MonoBehaviour {
 
 	void Move( float h, float v)
 	{
-		if (Input.GetKey (KeyCode.UpArrow) || Input.GetKey (KeyCode.LeftArrow) || Input.GetKey (KeyCode.DownArrow) || Input.GetKey (KeyCode.RightArrow)) 
-		{
 			movement.Set (h, 0f, v);
 
 			movement = movement.normalized * speed * Time.deltaTime;
@@ -45,7 +43,6 @@ public class Movement : MonoBehaviour {
 			} else if (h == 1) {
 				playerRigidBody.transform.rotation = Quaternion.AngleAxis (180, Vector3.up);
 			}
-		}
 
 	}
 
@@ -59,8 +56,5 @@ public class Movement : MonoBehaviour {
 			anim.SetBool ("IsFacingNorth", facingNorth);
 		}
 	}
-	void Rotate(float h)
-	{
-		
-	}
+
 }

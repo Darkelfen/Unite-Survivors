@@ -20,8 +20,8 @@ public class MovementPrueba : MonoBehaviour {
 
 	void FixedUpdate()
 	{
-		float h = Input.GetAxisRaw ("Horizontal");
-		float v = Input.GetAxisRaw ("Vertical");
+		float h = Input.GetAxisRaw ("HorizontalP2");
+		float v = Input.GetAxisRaw ("VerticalP2");
 
 		Move (h, v);
 		Animating (h, v);
@@ -30,8 +30,6 @@ public class MovementPrueba : MonoBehaviour {
 
 	void Move( float h, float v)
 	{
-		if (Input.GetKey("w") || Input.GetKey("a") || Input.GetKey("s") || Input.GetKey("d"))
-		{
 			movement.Set (h, 0f, v);
 
 			movement = movement.normalized * speed * Time.deltaTime;
@@ -43,7 +41,6 @@ public class MovementPrueba : MonoBehaviour {
 			} else if (h == 1) {
 				playerRigidBody.transform.rotation = Quaternion.AngleAxis (180, Vector3.up);
 			}
-		}
 
 	}
 

@@ -59,10 +59,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Dead
+    m_ConditionEvent: Dead2
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: IsFacingNorth
+    m_ConditionEvent: IsFacingNorth2
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102192814734542752}
@@ -86,10 +86,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: IsWalking
+    m_ConditionEvent: IsWalking2
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: IsFacingNorth
+    m_ConditionEvent: IsFacingNorth2
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102887938188045854}
@@ -134,10 +134,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Hurt
+    m_ConditionEvent: Hurt2
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: IsFacingNorth
+    m_ConditionEvent: IsFacingNorth2
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102755851939477534}
@@ -161,10 +161,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Hurt
+    m_ConditionEvent: Hurt2
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: IsFacingNorth
+    m_ConditionEvent: IsFacingNorth2
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102792681569127058}
@@ -188,10 +188,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Attack
+    m_ConditionEvent: Attack2
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: IsFacingNorth
+    m_ConditionEvent: IsFacingNorth2
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102667721632984232}
@@ -215,10 +215,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Attack
+    m_ConditionEvent: Attack2
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: IsFacingNorth
+    m_ConditionEvent: IsFacingNorth2
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102562182986789040}
@@ -242,10 +242,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Dead
+    m_ConditionEvent: Dead2
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: IsFacingNorth
+    m_ConditionEvent: IsFacingNorth2
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102622756378482010}
@@ -269,10 +269,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: IsWalking
+    m_ConditionEvent: IsWalking2
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: IsFacingNorth
+    m_ConditionEvent: IsFacingNorth2
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102496914156720318}
@@ -296,10 +296,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: IsFacingNorth
+    m_ConditionEvent: IsFacingNorth2
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: IsWalking
+    m_ConditionEvent: IsWalking2
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102887938188045854}
@@ -323,10 +323,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: IsWalking
+    m_ConditionEvent: IsWalking2
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: IsFacingNorth
+    m_ConditionEvent: IsFacingNorth2
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102420787431306190}
@@ -350,10 +350,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: IsWalking
+    m_ConditionEvent: IsWalking2
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: IsFacingNorth
+    m_ConditionEvent: IsFacingNorth2
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102095101840089368}
@@ -377,10 +377,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: IsFacingNorth
+    m_ConditionEvent: IsFacingNorth2
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: IsWalking
+    m_ConditionEvent: IsWalking2
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102095101840089368}
@@ -404,10 +404,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: IsWalking
+    m_ConditionEvent: IsWalking2
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: IsFacingNorth
+    m_ConditionEvent: IsFacingNorth2
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102420787431306190}
@@ -431,10 +431,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: IsWalking
+    m_ConditionEvent: IsWalking2
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: IsFacingNorth
+    m_ConditionEvent: IsFacingNorth2
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102496914156720318}
