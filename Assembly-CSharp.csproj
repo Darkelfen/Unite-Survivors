@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Movement.cs" />
+     <Compile Include="Assets\Scripts\MovementPrueba.cs" />
      <Compile Include="Assets\Scripts\sprite.cs" />
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>C:/Users/Hachi/OneDrive/Documents/GitHub/Unite-Survivors/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>

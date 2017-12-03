@@ -12,6 +12,7 @@ public class Movement : MonoBehaviour {
 	Animator anim;
 	Rigidbody playerRigidBody;
 
+
 	void Awake()
 	{
 		anim = GetComponent<Animator> ();
@@ -31,16 +32,19 @@ public class Movement : MonoBehaviour {
 
 	void Move( float h, float v)
 	{
-		movement.Set (h, 0f, v);
+		if (Input.GetKey (KeyCode.UpArrow) || Input.GetKey (KeyCode.LeftArrow) || Input.GetKey (KeyCode.DownArrow) || Input.GetKey (KeyCode.RightArrow)) 
+		{
+			movement.Set (h, 0f, v);
 
-		movement = movement.normalized * speed * Time.deltaTime;
+			movement = movement.normalized * speed * Time.deltaTime;
 
-		playerRigidBody.MovePosition (transform.position + movement);
+			playerRigidBody.MovePosition (transform.position + movement);
 
-		if (h == -1) {
-			playerRigidBody.transform.rotation = Quaternion.AngleAxis (0, Vector3.up);
-		} else if (h == 1){
-			playerRigidBody.transform.rotation = Quaternion.AngleAxis(180, Vector3.up);
+			if (h == -1) {
+				playerRigidBody.transform.rotation = Quaternion.AngleAxis (0, Vector3.up);
+			} else if (h == 1) {
+				playerRigidBody.transform.rotation = Quaternion.AngleAxis (180, Vector3.up);
+			}
 		}
 
 	}
