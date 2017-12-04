@@ -26,6 +26,8 @@ GameObject:
   - component: {fileID: 195533567005911918}
   - component: {fileID: 114821115546066900}
   - component: {fileID: 114230641865637376}
+  - component: {fileID: 114182532085451240}
+  - component: {fileID: 114080347717343152}
   m_Layer: 0
   m_Name: Oso
   m_TagString: Untagged
@@ -78,6 +80,30 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114080347717343152
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1457815720531444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb23220899dc8c7488036422d4021cab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114182532085451240
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1457815720531444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0d05bc196dba294fab1fecb2359b9fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetweenAttacks: 0.5
+  attackDamage: 10
 --- !u!114 &114230641865637376
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -115,7 +141,7 @@ CapsuleCollider:
   m_Radius: 0.41
   m_Height: 1.09
   m_Direction: 1
-  m_Center: {x: 0.41, y: -0.545, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!195 &195533567005911918
 NavMeshAgent:
   m_ObjectHideFlags: 1
@@ -133,8 +159,8 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 1
-  m_BaseOffset: 1
+  m_Height: 0.74
+  m_BaseOffset: 0.45
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!212 &212908373859331452

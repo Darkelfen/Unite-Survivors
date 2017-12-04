@@ -77,6 +77,7 @@ public class Health1 : MonoBehaviour {
 			// ... it should die.
 			anim.SetTrigger ("Dead");
 			playerMovement.enabled = false;
+
 		}
 	}
 

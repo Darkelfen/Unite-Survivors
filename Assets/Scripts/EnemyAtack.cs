@@ -73,7 +73,7 @@ public class EnemyAtack : MonoBehaviour {
 			
 			anim.SetBool ("IsWalking",false);
 			anim.SetBool ("IsFacingNorth",false);
-
+			Destroy (player);
 			// ... tell the animator the player is dead.
 			//anim.SetTrigger ("Player_Die");
 

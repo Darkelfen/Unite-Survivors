@@ -92,7 +92,6 @@
      <Compile Include="Assets\PlayButton.cs" />
      <Compile Include="Assets\Return.cs" />
      <Compile Include="Assets\Scripts\AnimalRandMovement.cs" />
-     <Compile Include="Assets\Scripts\ApfelSpawn.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\EnemyAtack.cs" />
      <Compile Include="Assets\Scripts\EnemyMovement.cs" />
