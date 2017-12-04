@@ -13,7 +13,7 @@ public class AnimalRandMovement : MonoBehaviour {
     private float timer;
 	private Animator anim;
 	private Rigidbody mobRigidBody;
- 
+  /*
     // Use this for initialization
     void OnEnable () {
 		anim = GetComponent<Animator> ();
@@ -57,7 +57,8 @@ public class AnimalRandMovement : MonoBehaviour {
     }
 	}
  
-    public static Vector3 RandomNavSphere(Vector3 origin, float dist, int layermask) {
+    public static Vector3 RandomNavSphere(Vector3 origin, float dist, int layermask)
+	{
         Vector3 randDirection = Random.insideUnitSphere * dist;
  
         randDirection += origin;
@@ -87,5 +88,5 @@ public class AnimalRandMovement : MonoBehaviour {
 			anim.SetBool ("IsFacingNorth", facingNorth);
 		}
 	}
-
+	*/
 }

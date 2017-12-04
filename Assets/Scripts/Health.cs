@@ -11,6 +11,7 @@ public class Health : MonoBehaviour {
 		currentHealth -= amount;
 		if (currentHealth <= 0)
 		{
+			
 			currentHealth = 0;
 		}
 	}
