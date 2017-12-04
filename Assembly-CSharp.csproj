@@ -51,8 +51,46 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\InventoryMaster\Scripts\CraftSystem\Blueprint.cs" />
+     <Compile Include="Assets\InventoryMaster\Scripts\CraftSystem\BlueprintDatabase.cs" />
+     <Compile Include="Assets\InventoryMaster\Scripts\CraftSystem\CraftResultSlot.cs" />
+     <Compile Include="Assets\InventoryMaster\Scripts\CraftSystem\CraftSystem.cs" />
+     <Compile Include="Assets\InventoryMaster\Scripts\CraftSystem\CreateBlueprintDatabase.cs" />
+     <Compile Include="Assets\InventoryMaster\Scripts\CraftSystem\LeftClick.cs" />
+     <Compile Include="Assets\InventoryMaster\Scripts\CraftSystem\RightClick.cs" />
+     <Compile Include="Assets\InventoryMaster\Scripts\ExampleScript\PlayerInventory.cs" />
+     <Compile Include="Assets\InventoryMaster\Scripts\ExampleScript\RandomChestLootSystem.cs" />
+     <Compile Include="Assets\InventoryMaster\Scripts\ExampleScript\RandomLootSystem.cs" />
+     <Compile Include="Assets\InventoryMaster\Scripts\ExampleScript\WorkingStation.cs" />
+     <Compile Include="Assets\InventoryMaster\Scripts\FirstPerson\FirstPersonController.cs" />
+     <Compile Include="Assets\InventoryMaster\Scripts\Hotbar\Hotbar.cs" />
+     <Compile Include="Assets\InventoryMaster\Scripts\Inventory\CloseInventory.cs" />
+     <Compile Include="Assets\InventoryMaster\Scripts\Inventory\DesignForInventory.cs" />
+     <Compile Include="Assets\InventoryMaster\Scripts\Inventory\DragInventory.cs" />
+     <Compile Include="Assets\InventoryMaster\Scripts\Inventory\EquipmentSystem.cs" />
+     <Compile Include="Assets\InventoryMaster\Scripts\Inventory\InputManager.cs" />
+     <Compile Include="Assets\InventoryMaster\Scripts\Inventory\Inventory.cs" />
+     <Compile Include="Assets\InventoryMaster\Scripts\Inventory\InventoryDesign.cs" />
+     <Compile Include="Assets\InventoryMaster\Scripts\Inventory\StorageInventory.cs" />
+     <Compile Include="Assets\InventoryMaster\Scripts\Item\ConsumeItem.cs" />
+     <Compile Include="Assets\InventoryMaster\Scripts\Item\CreateAttributeDatabase.cs" />
+     <Compile Include="Assets\InventoryMaster\Scripts\Item\CreateInputManager.cs" />
+     <Compile Include="Assets\InventoryMaster\Scripts\Item\CreateItemDatabase.cs" />
+     <Compile Include="Assets\InventoryMaster\Scripts\Item\DragItem.cs" />
+     <Compile Include="Assets\InventoryMaster\Scripts\Item\Item.cs" />
+     <Compile Include="Assets\InventoryMaster\Scripts\Item\ItemAttribute.cs" />
+     <Compile Include="Assets\InventoryMaster\Scripts\Item\ItemAttributeList.cs" />
+     <Compile Include="Assets\InventoryMaster\Scripts\Item\ItemDataBaseList.cs" />
+     <Compile Include="Assets\InventoryMaster\Scripts\Item\ItemOnObject.cs" />
+     <Compile Include="Assets\InventoryMaster\Scripts\Item\ItemType.cs" />
+     <Compile Include="Assets\InventoryMaster\Scripts\Item\PickUpItem.cs" />
+     <Compile Include="Assets\InventoryMaster\Scripts\Item\ShowTooltip.cs" />
+     <Compile Include="Assets\InventoryMaster\Scripts\Item\SlotCover.cs" />
+     <Compile Include="Assets\InventoryMaster\Scripts\Item\SplitItem.cs" />
+     <Compile Include="Assets\InventoryMaster\Scripts\Tooltip\Tooltip.cs" />
      <Compile Include="Assets\OnColissionWith.cs" />
      <Compile Include="Assets\PlayButton.cs" />
+     <Compile Include="Assets\Return.cs" />
      <Compile Include="Assets\Scripts\AnimalRandMovement.cs" />
      <Compile Include="Assets\Scripts\ApfelSpawn.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
@@ -116,6 +154,7 @@
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
      <None Include="Assets\TextMesh Pro\Fonts\Bangers - OFL.txt" />
+     <None Include="Assets\InventoryMaster\readme.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -143,14 +182,14 @@
  <Reference Include="UnityEngine.SpatialTracking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
+ <Reference Include="TextMeshPro-1.0.55.2017.2.0b12">
+ <HintPath>C:/Users/Hachi/OneDrive/Documents/GitHub/Unite-Survivors/Assets/TextMesh Pro/Plugins/TextMeshPro-1.0.55.2017.2.0b12.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.Analytics">
  <HintPath>C:/Users/Hachi/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@1.0.1/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Purchasing">
  <HintPath>C:/Users/Hachi/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/UnityEngine.Purchasing.dll</HintPath>
- </Reference>
- <Reference Include="TextMeshPro-1.0.55.2017.2.0b12">
- <HintPath>C:/Users/Hachi/OneDrive/Documents/GitHub/Unite-Survivors/Assets/TextMesh Pro/Plugins/TextMeshPro-1.0.55.2017.2.0b12.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
