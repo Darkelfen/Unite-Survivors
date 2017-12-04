@@ -1,10 +1,5 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MobSpawn.cs">
-    <Files>
-      <File FileName="Assets\Scripts\MobSpawn.cs" Line="45" Column="17" />
-=======
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Health1.cs">
     <Files>
       <File FileName="Assets\Scripts\Health.cs" Line="1" Column="1" />
@@ -14,7 +9,6 @@
       <File FileName="Assets\Scripts\EnemyAtack.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\EnemyMovement.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Health1.cs" Line="94" Column="3" />
->>>>>>> efaf84662860c1bd8c264cbc157acb592a891333
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
