@@ -27,6 +27,7 @@ public class Movement : MonoBehaviour {
 
 		Move (h, v);
 		Animating (h, v);
+		Debug.Log ("X: " + transform.position.x + " Z:" + transform.position.z);
 
 	}
 
