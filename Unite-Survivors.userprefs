@@ -1,6 +1,6 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\TextMesh Pro\Examples\Textures\PlayButton.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Health.cs">
     <Files>
       <File FileName="Assets\Scripts\Health.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\AnimalRandMovement.cs" Line="1" Column="1" />
@@ -9,7 +9,6 @@
       <File FileName="Assets\Scripts\EnemyAtack.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\EnemyMovement.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Health1.cs" Line="1" Column="1" />
-      <File FileName="Assets\TextMesh Pro\Examples\Textures\PlayButton.cs" Line="15" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
