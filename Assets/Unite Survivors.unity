@@ -1026,6 +1026,7 @@ GameObject:
   - component: {fileID: 1978131259}
   - component: {fileID: 1978131258}
   - component: {fileID: 1978131257}
+  - component: {fileID: 1978131262}
   m_Layer: 0
   m_Name: Snake
   m_TagString: Untagged
@@ -1135,6 +1136,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1978131262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1978131256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9b517ae477c8634ca9cd28af02f3200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
 --- !u!1 &2093410758
 GameObject:
   m_ObjectHideFlags: 0
@@ -1147,6 +1160,7 @@ GameObject:
   - component: {fileID: 2093410759}
   - component: {fileID: 2093410762}
   - component: {fileID: 2093410763}
+  - component: {fileID: 2093410764}
   m_Layer: 0
   m_Name: Oso
   m_TagString: Untagged
@@ -1256,3 +1270,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
+--- !u!114 &2093410764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2093410758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9b517ae477c8634ca9cd28af02f3200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
