@@ -14,7 +14,7 @@ public class Health1 : MonoBehaviour {
 
 
 	Animator anim;                                              // Reference to the Animator component.
-	//AudioSource playerAudio;                                    // Reference to the AudioSource component.
+	AudioSource playerAudio;                                    // Reference to the AudioSource component.
 	Movement playerMovement;                              // Reference to the player's movement.
 	//PlayerShooting playerShooting;                              // Reference to the PlayerShooting script.
 	bool isDead;                                                // Whether the player is dead.
@@ -25,7 +25,7 @@ public class Health1 : MonoBehaviour {
 	{
 		// Setting up the references.
 		anim = GetComponent <Animator> ();
-//		playerAudio = GetComponent <AudioSource> ();
+	playerAudio = GetComponent <AudioSource> ();
 		playerMovement = GetComponent <Movement> ();
 		//= GetComponentInChildren <PlayerShooting> ();
 
@@ -69,6 +69,7 @@ public class Health1 : MonoBehaviour {
 			// Play the hurt sound effect.
 			//playerAudio.Play ();
 			anim.SetTrigger("Hurt");
+
 		}
 
 		// If the player has lost all it's health and the death flag hasn't been set yet...
