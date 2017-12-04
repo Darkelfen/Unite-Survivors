@@ -10,6 +10,7 @@ public class EnemyAtack : MonoBehaviour {
 
 	Animator anim;                              // Reference to the animator component.
 	GameObject player;                          // Reference to the player GameObject.
+	GameObject Oso;                          // Reference to the player GameObject.
 	Health1 playerHealth;                  // Reference to the player's health.
 	Health enemyHealth;                    // Reference to this enemy's health.
 	bool playerInRange;                         // Whether player is within the trigger collider and can be attacked.
@@ -91,7 +92,10 @@ public class EnemyAtack : MonoBehaviour {
 			anim.SetTrigger ("Attack");
 			// ... damage the player.
 			playerHealth.TakeDamage (attackDamage);
-		
+
+			AudioSource audio = GetComponent<AudioSource>();
+			audio.Play();
+			audio.Play(44100);
 		
 	}
 }

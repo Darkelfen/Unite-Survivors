@@ -7,6 +7,7 @@ TagManager:
   - Bear
   - Enemy
   - Player2
+  - Snake
   layers:
   - Default
   - TransparentFX
