@@ -58,21 +58,25 @@ public class Health1 : MonoBehaviour {
 	{
 		// Set the damaged flag so the screen will flash.
 		damaged = true;
+		if(currentHealth > 0 )
+		{
+			// Reduce the current health by the damage amount.
+			currentHealth -= amount;
 
-		// Reduce the current health by the damage amount.
-		currentHealth -= amount;
+			// Set the health bar's value to the current health.
+			//healthSlider.value = currentHealth;
 
-		// Set the health bar's value to the current health.
-		//healthSlider.value = currentHealth;
+			// Play the hurt sound effect.
+			//playerAudio.Play ();
+			anim.SetTrigger("Hurt");
+		}
 
-		// Play the hurt sound effect.
-		//playerAudio.Play ();
-		anim.SetTrigger("Hurt");
 		// If the player has lost all it's health and the death flag hasn't been set yet...
-		if(currentHealth <= 0 && !isDead)
+		if(currentHealth <= 0 )
 		{
 			// ... it should die.
-			Death ();
+			anim.SetTrigger ("Dead");
+			playerMovement.enabled = false;
 		}
 	}
 
