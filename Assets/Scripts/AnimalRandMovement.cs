@@ -55,6 +55,7 @@ public class AnimalRandMovement : MonoBehaviour {
 		Moving (h);
 		Animating (h, v);
     }
+	}
  
     public static Vector3 RandomNavSphere(Vector3 origin, float dist, int layermask) {
         Vector3 randDirection = Random.insideUnitSphere * dist;
