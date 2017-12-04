@@ -22,8 +22,8 @@ public class AnimalRandMovement : MonoBehaviour {
 
 	void FixedUpdate()
 	{
-		float h = ;
-		float v = ;
+		float h = 0;
+		float v =0 ;
 
 		Move (h, v);
 		Animating (h, v);
