@@ -29,7 +29,7 @@ public class EnemyAtack : MonoBehaviour {
 	void OnTriggerEnter (Collider other)
 	{
 		// If the entering collider is the player...
-		if (playerHealth.currentHealth >= 0) {
+
 			if (other.gameObject == player) {
 			
 				// ... the player is in range.
@@ -37,20 +37,21 @@ public class EnemyAtack : MonoBehaviour {
 
 				playerInRange = true;
 			}
-		}
+		
 	}
 
 
 	void OnTriggerExit (Collider other)
 	{
 		// If the exiting collider is the player...
-		if (playerHealth.currentHealth >= 0) {
-			if (other.gameObject == player) {
+
+			if (other.gameObject == player) 
+			{
 			
 				// ... the player is no longer in range.
 				playerInRange = false;
 			}
-		}
+
 	}
 	void Update ()
 	{
@@ -60,10 +61,9 @@ public class EnemyAtack : MonoBehaviour {
 		// If the timer exceeds the time between attacks, the player is in range and this enemy is alive...
 		if(timer >= timeBetweenAttacks && playerInRange && enemyHealth.currentHealth > 0)
 		{
-			if (playerHealth.currentHealth >= 0) {
-				// ... attack.
+			
 				Attack ();
-			}
+			
 		}
 
 		// If the player has zero or less health...
@@ -72,8 +72,10 @@ public class EnemyAtack : MonoBehaviour {
 			
 			anim.SetBool ("IsWalking",false);
 			anim.SetBool ("IsFacingNorth",false);
+
 			// ... tell the animator the player is dead.
 			//anim.SetTrigger ("Player_Die");
+
 		
 
 		}
@@ -84,12 +86,12 @@ public class EnemyAtack : MonoBehaviour {
 	{
 		// Reset the timer.
 		timer = 0f;
-		anim.SetTrigger ("Attack");
+
 		// If the player has health to lose...
-		if(playerHealth.currentHealth > 0)
-		{
+			anim.SetTrigger ("Attack");
 			// ... damage the player.
 			playerHealth.TakeDamage (attackDamage);
-		}
+		
+		
 	}
 }
