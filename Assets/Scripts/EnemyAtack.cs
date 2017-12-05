@@ -59,28 +59,17 @@ public class EnemyAtack : MonoBehaviour {
 	{
 		// Add the time since Update was last called to the timer.
 		timer += Time.deltaTime;
-
-		// If the timer exceeds the time between attacks, the player is in range and this enemy is alive...
-		if(timer >= timeBetweenAttacks && playerInRange && enemyHealth.currentHealth > 0)
-		{
-			
-				Attack ();
-			
-		}
-
-		// If the player has zero or less health...
-		if(playerHealth.currentHealth <= 0)
-		{
-			
-			anim.SetBool ("IsWalking",false);
-			anim.SetBool ("IsFacingNorth",false);
+		if (playerHealth.currentHealth <= 0) {
 			Destroy (player);
-			// ... tell the animator the player is dead.
-			//anim.SetTrigger ("Player_Die");
-
-		
-
+			anim.ResetTrigger ("Attack");
+			audio.Stop ();
 		}
+		// If the timer exceeds the time between attacks, the player is in range and this enemy is alive...
+		else if(timer >= timeBetweenAttacks && playerInRange && enemyHealth.currentHealth > 0)
+		{
+			Attack ();
+		}
+
 	}
 
 
@@ -88,15 +77,16 @@ public class EnemyAtack : MonoBehaviour {
 	{
 		// Reset the timer.
 		timer = 0f;
-
+		audio.Play ();
 		// If the player has health to lose...
 			anim.SetTrigger ("Attack");
 			// ... damage the player.
 			playerHealth.TakeDamage (attackDamage);
-
-		audio.Play ();
-			
-			
-		
+		// If the player has zero or less health...
+		if (playerHealth.currentHealth <= 0) {
+			Destroy (player);
+			anim.ResetTrigger ("Attack");
+			audio.Stop ();
+		}
 	}
 }
