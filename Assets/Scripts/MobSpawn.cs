@@ -20,6 +20,8 @@ public class MobSpawn : MonoBehaviour {
 	private Vector3 Pos;
 	// Use this for initialization
 	void Start () {
+		MakeForest ();
+
 	}
 
 	// Update is called once per frame
@@ -33,13 +35,7 @@ public class MobSpawn : MonoBehaviour {
 			Spawn (type);
 			apfelTimer = 0f;
 		}
-
-		if (treeTimer >= treeTime) {
-			type = 1;
-			Spawn (type);
-			treeTimer = 0f;
-		}
-
+	
 		if (osoTimer >= osoTime) {
 			type = 2;
 			Spawn (type);
@@ -59,10 +55,6 @@ public class MobSpawn : MonoBehaviour {
 			Pos = new Vector3(this.transform.position.x + Random.Range (-500f, 500f), 0.1f, this.transform.position.z + Random.Range (-500f, 500f));
 			Instantiate (apfel, Pos, Quaternion.identity);
 			break;
-		case 1:
-			Pos = new Vector3(this.transform.position.x + Random.Range (-500f, 500f), 0.4f, this.transform.position.z + Random.Range (-500f, 500f));
-			Instantiate (Tree, Pos, Quaternion.identity);
-			break;
 		case 2:
 			Pos = new Vector3(this.transform.position.x + Random.Range (-500f, 500f), this.transform.position.y, this.transform.position.z + Random.Range (-500f, 500f));
 			Instantiate (Oso, Pos, Quaternion.identity);
@@ -75,5 +67,20 @@ public class MobSpawn : MonoBehaviour {
 			break;
 		}
 
+	}
+
+	void MakeForest ()
+	{
+		/*
+		float spawnChance = 30f;
+		for (int i = 0; i < 500; i++) {
+			for (int j = 0; j < 500; j++) {
+				if (spawnChance < Random.Range (0f, 100f)) {
+					Pos = new Vector3 (i, 0.4f, j);
+					Instantiate (Tree, Pos, Quaternion.identity);
+				}
+			}
+		}
+		*/
 	}
 }
