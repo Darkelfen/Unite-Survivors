@@ -51,6 +51,7 @@ public class Health1 : MonoBehaviour {
 
 		// Reset the damaged flag.
 		damaged = false;
+
 	}
 
 
@@ -68,16 +69,13 @@ public class Health1 : MonoBehaviour {
 
 			// Play the hurt sound effect.
 			//playerAudio.Play ();
-			anim.SetTrigger("Hurt");
 
 		}
 
 		// If the player has lost all it's health and the death flag hasn't been set yet...
 		if(currentHealth <= 0 )
 		{
-			// ... it should die.
-			anim.SetTrigger ("Dead");
-			playerMovement.enabled = false;
+			Death ();
 
 		}
 	}
@@ -85,22 +83,26 @@ public class Health1 : MonoBehaviour {
 
 	void Death ()
 	{
-		// Set the death flag so this function won't be called again.
-		isDead = true;
+		
+		if (!isDead)
+		{
+			// Set the death flag so this function won't be called again.
+			isDead = true;
 
-		// Turn off any remaining shooting effects.
-		//playerShooting.DisableEffects ();
+			// Turn off any remaining shooting effects.
+			//playerShooting.DisableEffects ();
 
-		// Tell the animator that the player is dead.
-		anim.SetTrigger ("Dead");
+			// Tell the animator that the player is dead.
+			anim.SetTrigger ("Dead");
 
-		// Set the audiosource to play the death clip and play it (this will stop the hurt sound from playing).
-		//playerAudio.clip = deathClip;
-		//playerAudio.Play ();
+			// Set the audiosource to play the death clip and play it (this will stop the hurt sound from playing).
+			//playerAudio.clip = deathClip;
+			//playerAudio.Play ();
 
-		// Turn off the movement and shooting scripts.
-		playerMovement.enabled = false;
-		//playerShooting.enabled = false;
+			// Turn off the movement and shooting scripts.
+			playerMovement.enabled = false;
+			//playerShooting.enabled = false;
+		}
 	}       
 
 }
