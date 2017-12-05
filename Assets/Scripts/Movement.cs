@@ -26,9 +26,11 @@ public class Movement : MonoBehaviour {
 	{
 		float h = Input.GetAxisRaw ("Horizontal");
 		float v = Input.GetAxisRaw ("Vertical");
+		float a = Input.GetAxisRaw ("Fire2");
 
 		Move (h, v);
 		Animating (h, v);
+		Attacking (a);
 
 	}
 
@@ -66,6 +68,12 @@ public class Movement : MonoBehaviour {
 		{
 			anim.SetBool ("IsFacingNorth", facingNorth);
 		}
+	}
+
+	void Attacking (float a)
+	{
+		bool attack = a != 0f;
+		anim.SetBool ("IsAttacking",attack);
 	}
 
 }
