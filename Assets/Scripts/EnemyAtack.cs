@@ -10,7 +10,6 @@ public class EnemyAtack : MonoBehaviour {
 
 	Animator anim;                              // Reference to the animator component.
 	GameObject player;                          // Reference to the player GameObject.
-	GameObject Oso;                          // Reference to the player GameObject.
 	Health1 playerHealth;                  // Reference to the player's health.
 	Health enemyHealth;                    // Reference to this enemy's health.
 	bool playerInRange;                         // Whether player is within the trigger collider and can be attacked.

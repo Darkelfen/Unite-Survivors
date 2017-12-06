@@ -42,19 +42,19 @@ public class Movement : MonoBehaviour {
 	{
 		health = other.GetComponent<Health>();
 		objectInRange = true;
-		if (other.CompareTag("Snake") && isAttacking)
+		if (other.CompareTag("Snake") && isAttacking && objectInRange)
 		{
 			health.TakeDamage (5);
 		}
-		if (other.CompareTag ("Bear") && isAttacking) 
+		if (other.CompareTag ("Bear") && isAttacking && objectInRange) 
 		{
 			health.TakeDamage (5);
 		}
-		if (other.CompareTag ("Tree") && isAttacking) 
+		if (other.CompareTag ("Tree") && isAttacking && objectInRange) 
 		{
 			health.TakeDamage (5);
 		}
-		if (other.CompareTag ("Item")) 
+		if (other.CompareTag ("Item") && objectInRange) 
 		{
 			//Pickup function here
 		}
@@ -65,7 +65,6 @@ public class Movement : MonoBehaviour {
 	void OnTriggerExit (Collider other)
 	{
 		objectInRange = false;
-
 	}
 	void Move( float h, float v)
 	{
