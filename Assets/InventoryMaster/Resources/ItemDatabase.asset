@@ -575,13 +575,13 @@ MonoBehaviour:
     indexItemInList: 999
     rarity: 0
     itemAttributes: []
-  - itemName: New Item
+  - itemName: Axe
     itemID: 37
     itemDesc: 
-    itemIcon: {fileID: 0}
-    itemModel: {fileID: 0}
+    itemIcon: {fileID: 21300000, guid: e71c97bcbd9c04d45b84ba60ef821eb1, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
     itemValue: 1
-    itemType: 0
+    itemType: 1
     itemWeight: 0
     maxStack: 1
     indexItemInList: 999
