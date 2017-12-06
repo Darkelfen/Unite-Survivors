@@ -14,7 +14,7 @@ public class MovementPrueba : MonoBehaviour {
 	bool isAttacking = false;
 	private float soundTime = 0.3f;
 	private float soundTimer = 0f;
-	private float timeBetweenAttacks = 0.5f;
+	private float timeBetweenAttacks = 2f;
 	private float attackTimer = 0f;
 
 	void Awake()
@@ -101,10 +101,11 @@ public class MovementPrueba : MonoBehaviour {
 
 	void Attacking (float a)
 	{
-		isAttacking = a != 0f;
 		attackTimer += Time.deltaTime;
-		if (timeBetweenAttacks >= attackTimer) {
+		if (attackTimer >= timeBetweenAttacks) {
+			isAttacking = a != 0f;
 			anim.SetBool ("IsAttacking",isAttacking);
+			attackTimer = 0f;
 		}
 
 	}

@@ -15,4 +15,9 @@ public class Health : MonoBehaviour {
 			currentHealth = 0;
 		}
 	}
+
+	void FixedUpdate()
+	{
+		//Drop ();
+	}
 }
