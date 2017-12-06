@@ -24,11 +24,11 @@ public class Health : MonoBehaviour {
 	}
 
 	void Drop (){
-		if (gameObject.CompareTag ("Bear")) {
+		if (gameObject.name == "Bear") {
 		}
-		if (gameObject.CompareTag ("Snake")) {
+		if (gameObject.name == "Snake") {
 		}
-		if (gameObject.CompareTag ("Tree")) {
+		if (gameObject.name == "Tree") {
 		}
 		Destroy (gameObject);
 	}

@@ -14,9 +14,10 @@ public class Movement : MonoBehaviour {
 	Health health;
 	bool objectInRange = false;
 	bool isAttacking = false;
+	bool isColliding = true;
 	private float soundTime = 0.3f;
 	private float soundTimer = 0f;
-	private float timeBetweenAttacks = 2f;
+	private float timeBetweenAttacks = 0.5f;
 	private float attackTimer = 0f;
 
 
@@ -40,6 +41,12 @@ public class Movement : MonoBehaviour {
 	}
 	void OnTriggerEnter (Collider other)
 	{
+		if ((other.gameObject.name == "Snake" || other.gameObject.name == "Oso" || other.gameObject.name == "Tree")) {
+			//Destroy (other.gameObject);
+			isColliding = true;
+			health = other.gameObject.GetComponent<Health> ();
+		}
+		/*
 		health = other.GetComponent<Health>();
 		objectInRange = true;
 		if (other.CompareTag("Snake") && isAttacking && objectInRange)
@@ -57,14 +64,14 @@ public class Movement : MonoBehaviour {
 		if (other.CompareTag ("Item") && objectInRange) 
 		{
 			//Pickup function here
-		}
+		}*/
 
 	}
 
 
 	void OnTriggerExit (Collider other)
 	{
-		objectInRange = false;
+		isColliding = false;
 	}
 	void Move( float h, float v)
 	{
@@ -105,12 +112,12 @@ public class Movement : MonoBehaviour {
 	void Attacking (float a)
 	{
 		attackTimer += Time.deltaTime;
-		if (attackTimer >= timeBetweenAttacks) {
-			isAttacking = a != 0f;
-			anim.SetBool ("IsAttacking",isAttacking);
+		isAttacking = a != 0f;
+		anim.SetBool ("IsAttacking",isAttacking);			
+
+		if (isColliding && isAttacking && (attackTimer >= timeBetweenAttacks)) {
+			health.TakeDamage (15);
 			attackTimer = 0f;
 		}
-
 	}
-
 }

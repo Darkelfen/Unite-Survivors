@@ -12,6 +12,7 @@ public class MovementPrueba : MonoBehaviour {
 	Health health;
 	bool objectInRange = false;
 	bool isAttacking = false;
+	bool isColliding = true;
 	private float soundTime = 0.3f;
 	private float soundTimer = 0f;
 	private float timeBetweenAttacks = 2f;
@@ -37,6 +38,13 @@ public class MovementPrueba : MonoBehaviour {
 
 	void OnTriggerEnter (Collider other)
 	{
+
+		if ((other.gameObject.name == "Snake" || other.gameObject.name == "Oso" || other.gameObject.name == "Tree")) {
+			//Destroy (other.gameObject);
+			isColliding = true;
+			health = other.gameObject.GetComponent<Health> ();
+		}
+		/**
 		health = other.GetComponent<Health>();
 		objectInRange = true;
 		if (other.CompareTag("Snake") && isAttacking && objectInRange)
@@ -55,6 +63,7 @@ public class MovementPrueba : MonoBehaviour {
 		{
 			//Pickup function here
 		}
+		*/
 
 	}
 
@@ -102,11 +111,12 @@ public class MovementPrueba : MonoBehaviour {
 	void Attacking (float a)
 	{
 		attackTimer += Time.deltaTime;
-		if (attackTimer >= timeBetweenAttacks) {
-			isAttacking = a != 0f;
-			anim.SetBool ("IsAttacking",isAttacking);
+		isAttacking = a != 0f;
+		anim.SetBool ("IsAttacking",isAttacking);			
+
+		if (isColliding && isAttacking && (attackTimer >= timeBetweenAttacks)) {
+			health.TakeDamage (15);
 			attackTimer = 0f;
 		}
-
 	}
 }
