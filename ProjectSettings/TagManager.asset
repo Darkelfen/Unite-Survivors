@@ -8,6 +8,17 @@ TagManager:
   - Enemy
   - Player2
   - Snake
+  - ItemIcon
+  - Slots
+  - Slot
+  - Canvas
+  - MainInventory
+  - Item
+  - ResultSlot
+  - Panel
+  - DraggingItem
+  - EventSystem
+  - Tree
   layers:
   - Default
   - TransparentFX

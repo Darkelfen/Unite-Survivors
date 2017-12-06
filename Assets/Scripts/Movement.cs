@@ -11,8 +11,13 @@ public class Movement : MonoBehaviour {
 	Vector3 movement;
 	Animator anim;
 	Rigidbody playerRigidBody;
+	Health health;
+	bool objectInRange = false;
+	bool isAttacking = false;
 	private float soundTime = 0.3f;
 	private float soundTimer = 0f;
+	private float timeBetweenAttacks = 0.5f;
+	private float attackTimer = 0f;
 
 
 	void Awake()
@@ -33,7 +38,35 @@ public class Movement : MonoBehaviour {
 		Attacking (a);
 
 	}
+	void OnTriggerEnter (Collider other)
+	{
+		health = other.GetComponent<Health>();
+		objectInRange = true;
+		if (other.CompareTag("Snake") && isAttacking)
+		{
+			health.TakeDamage (5);
+		}
+		if (other.CompareTag ("Bear") && isAttacking) 
+		{
+			health.TakeDamage (5);
+		}
+		if (other.CompareTag ("Tree") && isAttacking) 
+		{
+			health.TakeDamage (5);
+		}
+		if (other.CompareTag ("Item")) 
+		{
+			//Pickup function here
+		}
 
+	}
+
+
+	void OnTriggerExit (Collider other)
+	{
+		objectInRange = false;
+
+	}
 	void Move( float h, float v)
 	{
 		movement.Set (h, 0f, v);
@@ -72,8 +105,12 @@ public class Movement : MonoBehaviour {
 
 	void Attacking (float a)
 	{
-		bool attack = a != 0f;
-		anim.SetBool ("IsAttacking",attack);
+		isAttacking = a != 0f;
+		attackTimer += Time.deltaTime;
+		if (timeBetweenAttacks >= attackTimer) {
+			anim.SetBool ("IsAttacking",isAttacking);
+		}
+
 	}
 
 }
