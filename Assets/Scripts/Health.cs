@@ -5,6 +5,7 @@ using UnityEngine;
 public class Health : MonoBehaviour {
 	public const int maxHealth = 100;
 	public int currentHealth = maxHealth;
+	Vector3 pos;
 
 	public void TakeDamage(int amount)
 	{
@@ -18,6 +19,17 @@ public class Health : MonoBehaviour {
 
 	void FixedUpdate()
 	{
-		//Drop ();
+		if (currentHealth <= 0)
+			Drop ();
+	}
+
+	void Drop (){
+		if (this.CompareTag ("Bear")) {
+		}
+		if (this.CompareTag ("Snake")) {
+		}
+		if (this.CompareTag ("Tree")) {
+		}
+		this.Destroy ();
 	}
 }
