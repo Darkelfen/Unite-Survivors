@@ -155,7 +155,7 @@ public class Inventory : MonoBehaviour
     public void openInventory()
     {
         this.gameObject.SetActive(true);
-        if (InventoryOpen != null)
+       // if (InventoryOpen != null)
             InventoryOpen();
     }
 

@@ -150,7 +150,7 @@ public class PlayerInventory : MonoBehaviour
                 GameObject dropItem = (GameObject)Instantiate(mainInventory.ItemsInInventory[i].itemModel);
                 dropItem.AddComponent<PickUpItem>();
                 dropItem.GetComponent<PickUpItem>().item = mainInventory.ItemsInInventory[i];
-                dropItem.transform.localPosition = GameObject.FindGameObjectWithTag("Player").transform.localPosition;
+                dropItem.transform.localPosition = GameObject.FindGameObjectWithTag("Player2").transform.localPosition;
             }
         }
     }
@@ -176,8 +176,8 @@ public class PlayerInventory : MonoBehaviour
         if (craftSystem != null)
             cS = craftSystem.GetComponent<CraftSystem>();
 
-        if (GameObject.FindGameObjectWithTag("Tooltip") != null)
-            toolTip = GameObject.FindGameObjectWithTag("Tooltip").GetComponent<Tooltip>();
+        //if (GameObject.FindGameObjectWithTag("Tooltip") != null)
+          //  toolTip = GameObject.FindGameObjectWithTag("Tooltip").GetComponent<Tooltip>();
         if (inventory != null)
             mainInventory = inventory.GetComponent<Inventory>();
         if (characterSystem != null)

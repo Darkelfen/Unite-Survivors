@@ -8,7 +8,7 @@ public class InputManager : ScriptableObject
     public KeyCode throwGrenade = KeyCode.G;
 
     public KeyCode SplitItem;
-    public KeyCode InventoryKeyCode;
+	public KeyCode InventoryKeyCode = KeyCode.E;
     public KeyCode StorageKeyCode;
     public KeyCode CharacterSystemKeyCode;
     public KeyCode CraftSystemKeyCode;
