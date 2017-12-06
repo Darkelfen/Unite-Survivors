@@ -24,12 +24,12 @@ public class Health : MonoBehaviour {
 	}
 
 	void Drop (){
-		if (this.CompareTag ("Bear")) {
+		if (gameObject.CompareTag ("Bear")) {
 		}
-		if (this.CompareTag ("Snake")) {
+		if (gameObject.CompareTag ("Snake")) {
 		}
-		if (this.CompareTag ("Tree")) {
+		if (gameObject.CompareTag ("Tree")) {
 		}
-		this.Destroy ();
+		Destroy (gameObject);
 	}
 }
